@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentions légales — Classe En Main</title>
+<meta name="description" content="Mentions légales du site Classe En Main, conformément à la Loi pour la confiance dans l'économie numérique.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2942;--navy-dark:#0a1d33;--gold:#c9a063;--gold-dark:#a88249;--cream:#fdfcf8;--surface:#fff;--text:#1a1a1a;--muted:#5a6470;--border:#e8e6e0;--shadow-sm:0 1px 3px rgba(15,41,66,.08);--shadow-md:0 8px 24px rgba(15,41,66,.1);--shadow-lg:0 20px 48px rgba(15,41,66,.15);--radius:8px;--radius-lg:16px;--max-w:1200px;--font-h:'Playfair Display',Georgia,serif;--font-b:'Inter',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);font-size:16px;line-height:1.7;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none;transition:.2s}
+a:hover{color:var(--gold-dark);text-decoration:underline}
+h1,h2,h3{font-family:var(--font-h);font-weight:600;color:var(--navy);line-height:1.3;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.5vw,3rem)}
+h2{font-size:clamp(1.4rem,2.6vw,1.8rem);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:1rem}
+h3{font-size:1.1rem;margin:1.5rem 0 .5rem;color:var(--gold-dark)}
+p{margin-bottom:1rem;color:var(--text)}
+ul{margin:1rem 0 1rem 1.5rem;color:var(--text)}
+ul li{margin-bottom:.4rem}
+strong{color:var(--navy);font-weight:600}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(253,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;max-width:var(--max-w);margin:0 auto}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:var(--font-h);font-size:1.4rem;font-weight:600;color:var(--navy)}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:1rem;font-weight:700;box-shadow:var(--shadow-sm);position:relative;animation:logoEntry .8s cubic-bezier(.34,1.56,.64,1) both,logoPulse 4s ease-in-out 1s infinite}
+.logo-mark::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:radial-gradient(circle at 50% 0,var(--gold) 0 3px,transparent 4px);animation:logoOrbit 5s linear infinite;pointer-events:none}
+@keyframes logoEntry{from{opacity:0;transform:scale(.3) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
+@keyframes logoPulse{0%,100%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 0 rgba(201,160,99,.45)}50%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 10px rgba(201,160,99,0)}}
+@keyframes logoOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--text);font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--navy);text-decoration:none}
+.btn{display:inline-block;padding:.6rem 1.3rem;border-radius:var(--radius);font-weight:600;font-size:.9rem;border:1.5px solid var(--navy);background:var(--navy);color:var(--cream)}
+.page-header{padding:4rem 0 2rem;text-align:center;background:radial-gradient(ellipse at top,rgba(201,160,99,.08),transparent 60%),var(--cream)}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:1rem;padding:.4rem 1rem;background:rgba(201,160,99,.12);border-radius:100px}
+.legal-content{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem;background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.legal-section{padding:0 1rem}
+.last-update{color:var(--muted);font-style:italic;font-size:.9rem;text-align:center;margin-bottom:2rem}
+.info-box{background:#f7f4ec;border-left:4px solid var(--gold);padding:1rem 1.2rem;border-radius:6px;margin:1.5rem 0}
+.info-box p{margin-bottom:.4rem}
+.info-box p:last-child{margin-bottom:0}
+.site-footer{background:var(--navy-dark);color:rgba(253,252,248,.7);padding:4rem 0 1.5rem;margin-top:5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;max-width:var(--max-w);margin-left:auto;margin-right:auto;padding:0 1.5rem}
+.site-footer h4{color:var(--cream);font-family:var(--font-b);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer ul li{margin-bottom:.5rem}
+.site-footer a{color:rgba(253,252,248,.7);font-size:.92rem}
+.site-footer a:hover{color:var(--gold);text-decoration:none}
+.footer-brand .logo{color:var(--cream);margin-bottom:1rem}
+.footer-brand .logo-mark{background:var(--gold);color:var(--navy-dark)}
+.footer-brand p{color:rgba(253,252,248,.6);max-width:320px;font-size:.92rem}
+.footer-bottom{border-top:1px solid rgba(253,252,248,.1);padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(253,252,248,.5);max-width:var(--max-w);margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.legal-content{padding:2rem 1rem 3rem}}
+@media(max-width:720px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav" aria-label="Navigation principale">
+<a href="index.html" class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="services.html" class="btn">Commencer</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container">
+<span class="eyebrow">Informations légales</span>
+<h1>Mentions légales</h1>
+</div>
+</section>
+
+<div class="legal-content">
+<p class="last-update">Dernière mise à jour : 1<sup>er</sup> mai 2026</p>
+
+<div class="legal-section">
+
+<h2>1. Éditeur du site</h2>
+
+<div class="info-box">
+<p><strong>Nom commercial :</strong> Classe En Main</p>
+<p><strong>Représentante légale :</strong> Angéline Aron Clauss</p>
+<p><strong>Statut juridique :</strong> Entrepreneur individuel (auto-entrepreneur)</p>
+<p><strong>Adresse postale :</strong> 88 rue du Réthal, 57405 Guntviller, France</p>
+<p><strong>SIRET :</strong> 88232989900026</p>
+<p><strong>Code APE :</strong> 9602B (Soins de beauté)</p>
+<p><strong>TVA intracommunautaire :</strong> Non applicable — TVA non applicable, art. 293 B du CGI (franchise en base de TVA)</p>
+<p><strong>Email :</strong> <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></p>
+</div>
+
+<h2>2. Directrice de la publication</h2>
+<p>La directrice de la publication du site est Madame Angéline Aron Clauss, en sa qualité de représentante légale de Classe En Main.</p>
+
+<h2>3. Hébergeur du site</h2>
+<div class="info-box">
+<p><strong>Hébergeur :</strong> GitHub, Inc.</p>
+<p><strong>Adresse :</strong> 88 Colin P Kelly Jr Street, San Francisco, CA 94107, États-Unis</p>
+<p><strong>Site web :</strong> <a href="https://github.com" target="_blank" rel="noopener">https://github.com</a></p>
+<p><em>Le site est hébergé via le service GitHub Pages.</em></p>
+</div>
+
+<h2>4. Conception et développement</h2>
+<p>Le site a été conçu et développé pour Classe En Main. La structure technique, le code source et la conception graphique sont la propriété exclusive de Classe En Main.</p>
+
+<h2>5. Propriété intellectuelle</h2>
+<p>L'ensemble du contenu de ce site (textes, images, graphismes, logo, icônes, sons, vidéos, programmes informatiques, bases de données, etc.) est la propriété exclusive de Classe En Main, sauf mentions contraires.</p>
+
+<p>Toute reproduction, représentation, modification, publication, transmission, dénaturation, totale ou partielle du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que ce soit est interdite. Toute exploitation non autorisée du site ou de l'un quelconque de son contenu est constitutive de contrefaçon et passible de poursuites au titre des articles L.335-2 et suivants du Code de la Propriété Intellectuelle.</p>
+
+<h3>Contenus de formation</h3>
+<p>Les vidéos, supports de cours, scripts et ressources pédagogiques accessibles via les formules d'abonnement sont strictement réservés à un usage personnel par la personne abonnée. Toute diffusion, partage, copie ou utilisation à des fins commerciales est strictement interdite et donnera lieu à poursuites.</p>
+
+<h2>6. Liens hypertextes</h2>
+<p>Le site Classe En Main peut contenir des liens vers d'autres sites web. Classe En Main n'est pas responsable du contenu, de la disponibilité ou de la politique de confidentialité de ces sites tiers.</p>
+
+<h2>7. Crédits</h2>
+<p>Polices de caractères : Playfair Display et Inter, distribuées sous licence Open Font License (OFL) via Google Fonts.</p>
+
+<h2>8. Contact</h2>
+<p>Pour toute question concernant les présentes mentions légales, vous pouvez écrire à : <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></p>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></div>
+<p>Coaching en ligne pour avancer à votre rythme, avec un accompagnement humain et professionnel.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Légal</h4>
+<ul>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+<li><a href="cgv.html">CGV</a></li>
+<li><a href="confidentialite.html">Confidentialité</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></li>
+<li>Lun–Ven · 9h–18h</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="year"></span> Classe En Main. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

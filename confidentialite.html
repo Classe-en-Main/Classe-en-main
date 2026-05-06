@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Classe En Main</title>
+<meta name="description" content="Politique de confidentialité du site Classe En Main, conforme au Règlement Général sur la Protection des Données (RGPD).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2942;--navy-dark:#0a1d33;--gold:#c9a063;--gold-dark:#a88249;--cream:#fdfcf8;--surface:#fff;--text:#1a1a1a;--muted:#5a6470;--border:#e8e6e0;--shadow-sm:0 1px 3px rgba(15,41,66,.08);--shadow-md:0 8px 24px rgba(15,41,66,.1);--shadow-lg:0 20px 48px rgba(15,41,66,.15);--radius:8px;--radius-lg:16px;--max-w:1200px;--font-h:'Playfair Display',Georgia,serif;--font-b:'Inter',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);font-size:16px;line-height:1.7;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none;transition:.2s}
+a:hover{color:var(--gold-dark);text-decoration:underline}
+h1,h2,h3{font-family:var(--font-h);font-weight:600;color:var(--navy);line-height:1.3;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.5vw,3rem)}
+h2{font-size:clamp(1.4rem,2.6vw,1.8rem);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:1rem}
+h3{font-size:1.1rem;margin:1.5rem 0 .5rem;color:var(--gold-dark)}
+p{margin-bottom:1rem;color:var(--text)}
+ul{margin:1rem 0 1rem 1.5rem;color:var(--text)}
+ul li{margin-bottom:.4rem}
+strong{color:var(--navy);font-weight:600}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(253,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;max-width:var(--max-w);margin:0 auto}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:var(--font-h);font-size:1.4rem;font-weight:600;color:var(--navy)}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:1rem;font-weight:700;box-shadow:var(--shadow-sm);position:relative;animation:logoEntry .8s cubic-bezier(.34,1.56,.64,1) both,logoPulse 4s ease-in-out 1s infinite}
+.logo-mark::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:radial-gradient(circle at 50% 0,var(--gold) 0 3px,transparent 4px);animation:logoOrbit 5s linear infinite;pointer-events:none}
+@keyframes logoEntry{from{opacity:0;transform:scale(.3) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
+@keyframes logoPulse{0%,100%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 0 rgba(201,160,99,.45)}50%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 10px rgba(201,160,99,0)}}
+@keyframes logoOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--text);font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--navy);text-decoration:none}
+.btn{display:inline-block;padding:.6rem 1.3rem;border-radius:var(--radius);font-weight:600;font-size:.9rem;border:1.5px solid var(--navy);background:var(--navy);color:var(--cream)}
+.page-header{padding:4rem 0 2rem;text-align:center;background:radial-gradient(ellipse at top,rgba(201,160,99,.08),transparent 60%),var(--cream)}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:1rem;padding:.4rem 1rem;background:rgba(201,160,99,.12);border-radius:100px}
+.legal-content{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem;background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.legal-section{padding:0 1rem}
+.last-update{color:var(--muted);font-style:italic;font-size:.9rem;text-align:center;margin-bottom:2rem}
+.info-box{background:#f7f4ec;border-left:4px solid var(--gold);padding:1rem 1.2rem;border-radius:6px;margin:1.5rem 0}
+.rights-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin:1.5rem 0}
+.right-card{background:#f7f4ec;padding:1.2rem;border-radius:8px}
+.right-card strong{color:var(--navy);display:block;margin-bottom:.3rem}
+.right-card p{font-size:.92rem;margin:0;color:var(--text)}
+.site-footer{background:var(--navy-dark);color:rgba(253,252,248,.7);padding:4rem 0 1.5rem;margin-top:5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;max-width:var(--max-w);margin-left:auto;margin-right:auto;padding:0 1.5rem}
+.site-footer h4{color:var(--cream);font-family:var(--font-b);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer ul li{margin-bottom:.5rem}
+.site-footer a{color:rgba(253,252,248,.7);font-size:.92rem}
+.site-footer a:hover{color:var(--gold);text-decoration:none}
+.footer-brand .logo{color:var(--cream);margin-bottom:1rem}
+.footer-brand .logo-mark{background:var(--gold);color:var(--navy-dark)}
+.footer-brand p{color:rgba(253,252,248,.6);max-width:320px;font-size:.92rem}
+.footer-bottom{border-top:1px solid rgba(253,252,248,.1);padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(253,252,248,.5);max-width:var(--max-w);margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.legal-content{padding:2rem 1rem 3rem}}
+@media(max-width:720px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav" aria-label="Navigation principale">
+<a href="index.html" class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="services.html" class="btn">Commencer</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container">
+<span class="eyebrow">Informations légales</span>
+<h1>Politique de confidentialité</h1>
+</div>
+</section>
+
+<div class="legal-content">
+<p class="last-update">Dernière mise à jour : 1<sup>er</sup> mai 2026</p>
+
+<div class="legal-section">
+
+<h2>1. Préambule</h2>
+<p>La présente politique de confidentialité a pour objet d'informer les utilisateurs du site Classe En Main de la manière dont sont collectées et traitées leurs données personnelles, conformément au Règlement Général sur la Protection des Données (RGPD - Règlement UE 2016/679) et à la Loi Informatique et Libertés.</p>
+<p>Nous attachons une grande importance à la protection de vos données personnelles et à votre vie privée.</p>
+
+<h2>2. Identité du responsable du traitement</h2>
+<div class="info-box">
+<p><strong>Responsable de traitement :</strong> Classe En Main (entreprise individuelle)</p>
+<p><strong>Représentante :</strong> Madame Angéline Aron Clauss</p>
+<p><strong>Adresse :</strong> 88 rue du Réthal, 57405 Guntviller, France</p>
+<p><strong>SIRET :</strong> 88232989900026</p>
+<p><strong>Email :</strong> <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></p>
+</div>
+
+<h2>3. Données personnelles collectées</h2>
+<p>Nous collectons les catégories de données suivantes :</p>
+
+<h3>3.1 Données collectées via le formulaire de contact</h3>
+<ul>
+<li>Nom et prénom</li>
+<li>Adresse email</li>
+<li>Sujet et contenu du message</li>
+</ul>
+
+<h3>3.2 Données collectées lors de l'achat d'une formule</h3>
+<ul>
+<li>Nom et prénom</li>
+<li>Adresse email</li>
+<li>Adresse postale (le cas échéant, pour la facturation)</li>
+<li>Informations de paiement (traitées directement par PayPal — nous ne stockons aucune donnée bancaire)</li>
+</ul>
+
+<h3>3.3 Données collectées lors de l'utilisation de la plateforme de formation</h3>
+<ul>
+<li>Identifiants de connexion</li>
+<li>Historique de visionnage des contenus</li>
+<li>Échanges via la messagerie (le cas échéant)</li>
+<li>Participation à la communauté (le cas échéant)</li>
+</ul>
+
+<h3>3.4 Données techniques (collectées automatiquement)</h3>
+<ul>
+<li>Adresse IP (anonymisée si possible)</li>
+<li>Type de navigateur et appareil utilisé</li>
+<li>Pages consultées et temps passé</li>
+</ul>
+
+<h2>4. Finalités du traitement</h2>
+<p>Vos données personnelles sont collectées et traitées pour les finalités suivantes :</p>
+<ul>
+<li><strong>Gestion des commandes :</strong> traitement des paiements, envoi des accès, suivi de la prestation</li>
+<li><strong>Communication :</strong> réponse à vos questions, envoi d'emails liés à votre formation</li>
+<li><strong>Amélioration du service :</strong> analyse statistique de l'utilisation de la plateforme</li>
+<li><strong>Obligations légales :</strong> conservation des factures et documents comptables</li>
+</ul>
+
+<h2>5. Bases légales du traitement</h2>
+<p>Le traitement de vos données est fondé sur :</p>
+<ul>
+<li><strong>L'exécution du contrat</strong> qui vous lie à Classe En Main (pour la gestion des commandes et la fourniture des prestations)</li>
+<li><strong>Le consentement</strong> que vous nous donnez (notamment pour les communications optionnelles)</li>
+<li><strong>Les obligations légales</strong> auxquelles nous sommes soumis (notamment fiscales et comptables)</li>
+<li><strong>Notre intérêt légitime</strong> à améliorer nos services</li>
+</ul>
+
+<h2>6. Destinataires des données</h2>
+<p>Vos données personnelles ne sont transmises qu'aux destinataires strictement nécessaires :</p>
+<ul>
+<li><strong>PayPal</strong> (pour le traitement des paiements) — <a href="https://www.paypal.com/fr/webapps/mpp/ua/privacy-full" target="_blank" rel="noopener">Politique de confidentialité PayPal</a></li>
+<li><strong>Formspree</strong> (pour la transmission des messages du formulaire de contact, si utilisé) — <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Politique Formspree</a></li>
+<li><strong>Plateforme d'hébergement de formation</strong> (Systeme.io, le cas échéant) — pour la gestion de votre espace membre</li>
+<li><strong>GitHub Pages</strong> (hébergement du site) — <a href="https://docs.github.com/fr/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Politique GitHub</a></li>
+</ul>
+<p>Nous ne vendons, ne louons ni ne partageons vos données avec des tiers à des fins commerciales.</p>
+
+<h2>7. Durée de conservation des données</h2>
+<ul>
+<li><strong>Données de compte client :</strong> pendant toute la durée de votre relation avec nous, puis 3 ans après la fin de votre dernier accès</li>
+<li><strong>Données de facturation :</strong> 10 ans (obligation comptable)</li>
+<li><strong>Données du formulaire de contact :</strong> 3 ans à compter du dernier échange</li>
+<li><strong>Données techniques :</strong> 13 mois maximum</li>
+</ul>
+
+<h2>8. Vos droits</h2>
+<p>Conformément au RGPD, vous disposez des droits suivants concernant vos données :</p>
+
+<div class="rights-grid">
+<div class="right-card">
+<strong>Droit d'accès</strong>
+<p>Obtenir la confirmation que vos données sont traitées et en obtenir une copie.</p>
+</div>
+<div class="right-card">
+<strong>Droit de rectification</strong>
+<p>Faire corriger des données inexactes ou incomplètes.</p>
+</div>
+<div class="right-card">
+<strong>Droit à l'effacement</strong>
+<p>Demander la suppression de vos données dans les cas prévus par le RGPD.</p>
+</div>
+<div class="right-card">
+<strong>Droit à la limitation</strong>
+<p>Demander la limitation du traitement de vos données.</p>
+</div>
+<div class="right-card">
+<strong>Droit à la portabilité</strong>
+<p>Récupérer vos données dans un format structuré et lisible.</p>
+</div>
+<div class="right-card">
+<strong>Droit d'opposition</strong>
+<p>Vous opposer au traitement de vos données pour des raisons légitimes.</p>
+</div>
+</div>
+
+<p><strong>Pour exercer ces droits</strong>, écrivez à <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a> en précisant votre nom, votre demande, et en joignant si nécessaire un justificatif d'identité.</p>
+<p>Nous vous répondrons dans un délai maximum d'un mois.</p>
+
+<h2>9. Sécurité des données</h2>
+<p>Nous mettons en œuvre les mesures techniques et organisationnelles appropriées pour garantir la sécurité de vos données personnelles, notamment :</p>
+<ul>
+<li>Connexion sécurisée HTTPS sur l'ensemble du site</li>
+<li>Hébergement sur des serveurs sécurisés (GitHub, Systeme.io)</li>
+<li>Paiements traités via PayPal (système certifié PCI-DSS)</li>
+<li>Accès aux données limité aux personnes autorisées</li>
+</ul>
+
+<h2>10. Cookies et traceurs</h2>
+<p>Le site Classe En Main, dans sa version actuelle hébergée sur GitHub Pages, n'utilise <strong>pas de cookies de suivi commerciaux ni publicitaires</strong>. Seuls les cookies techniques strictement nécessaires au bon fonctionnement du site peuvent être utilisés.</p>
+<p>Si des cookies analytiques sont ajoutés ultérieurement (Google Analytics, etc.), un bandeau de consentement vous sera proposé conformément à la réglementation en vigueur.</p>
+
+<h2>11. Transfert hors Union européenne</h2>
+<p>Certains de nos prestataires (GitHub, PayPal) sont situés hors Union européenne, notamment aux États-Unis. Ces transferts sont encadrés par des garanties appropriées (clauses contractuelles types de la Commission européenne) pour assurer un niveau de protection équivalent au RGPD.</p>
+
+<h2>12. Réclamation auprès de la CNIL</h2>
+<p>Si vous estimez que le traitement de vos données ne respecte pas la réglementation, vous avez le droit d'introduire une réclamation auprès de la CNIL :</p>
+<div class="info-box">
+<p><strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong></p>
+<p>3 Place de Fontenoy — TSA 80715 — 75334 Paris Cedex 07</p>
+<p>Téléphone : 01 53 73 22 22</p>
+<p>Site : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a></p>
+</div>
+
+<h2>13. Modifications de la politique</h2>
+<p>La présente politique peut être modifiée à tout moment. La version applicable est celle en ligne au moment de votre visite. Les modifications substantielles vous seront notifiées par email si vous êtes client.</p>
+
+<h2>14. Contact</h2>
+<p>Pour toute question relative à cette politique de confidentialité ou au traitement de vos données : <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></p>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></div>
+<p>Coaching en ligne pour avancer à votre rythme, avec un accompagnement humain et professionnel.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Légal</h4>
+<ul>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+<li><a href="cgv.html">CGV</a></li>
+<li><a href="confidentialite.html">Confidentialité</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></li>
+<li>Lun–Ven · 9h–18h</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="year"></span> Classe En Main. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>

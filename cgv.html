@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conditions Générales de Vente — Classe En Main</title>
+<meta name="description" content="Conditions Générales de Vente des prestations de coaching et formation en ligne proposées par Classe En Main.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0f2942;--navy-dark:#0a1d33;--gold:#c9a063;--gold-dark:#a88249;--cream:#fdfcf8;--surface:#fff;--text:#1a1a1a;--muted:#5a6470;--border:#e8e6e0;--shadow-sm:0 1px 3px rgba(15,41,66,.08);--shadow-md:0 8px 24px rgba(15,41,66,.1);--shadow-lg:0 20px 48px rgba(15,41,66,.15);--radius:8px;--radius-lg:16px;--max-w:1200px;--font-h:'Playfair Display',Georgia,serif;--font-b:'Inter',-apple-system,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-b);font-size:16px;line-height:1.7;color:var(--text);background:var(--cream);-webkit-font-smoothing:antialiased}
+a{color:var(--navy);text-decoration:none;transition:.2s}
+a:hover{color:var(--gold-dark);text-decoration:underline}
+h1,h2,h3{font-family:var(--font-h);font-weight:600;color:var(--navy);line-height:1.3;letter-spacing:-.01em}
+h1{font-size:clamp(2rem,4.5vw,3rem)}
+h2{font-size:clamp(1.4rem,2.6vw,1.8rem);margin:2.5rem 0 1rem;padding-top:1rem;border-top:1px solid var(--border)}
+h2:first-of-type{border-top:none;padding-top:0;margin-top:1rem}
+h3{font-size:1.1rem;margin:1.5rem 0 .5rem;color:var(--gold-dark)}
+p{margin-bottom:1rem;color:var(--text)}
+ul{margin:1rem 0 1rem 1.5rem;color:var(--text)}
+ul li{margin-bottom:.4rem}
+strong{color:var(--navy);font-weight:600}
+.container{max-width:var(--max-w);margin:0 auto;padding:0 1.5rem}
+.site-header{position:sticky;top:0;z-index:100;background:rgba(253,252,248,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:1.1rem 1.5rem;max-width:var(--max-w);margin:0 auto}
+.logo{display:flex;align-items:center;gap:.7rem;font-family:var(--font-h);font-size:1.4rem;font-weight:600;color:var(--navy)}
+.logo-mark{width:40px;height:40px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);color:var(--cream);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-h);font-size:1rem;font-weight:700;box-shadow:var(--shadow-sm);position:relative;animation:logoEntry .8s cubic-bezier(.34,1.56,.64,1) both,logoPulse 4s ease-in-out 1s infinite}
+.logo-mark::after{content:'';position:absolute;inset:-4px;border-radius:50%;background:radial-gradient(circle at 50% 0,var(--gold) 0 3px,transparent 4px);animation:logoOrbit 5s linear infinite;pointer-events:none}
+@keyframes logoEntry{from{opacity:0;transform:scale(.3) rotate(-180deg)}to{opacity:1;transform:scale(1) rotate(0deg)}}
+@keyframes logoPulse{0%,100%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 0 rgba(201,160,99,.45)}50%{box-shadow:0 1px 3px rgba(15,41,66,.08),0 0 0 10px rgba(201,160,99,0)}}
+@keyframes logoOrbit{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.nav-links{display:flex;gap:2.2rem;list-style:none;align-items:center;margin:0;padding:0}
+.nav-links a{color:var(--text);font-size:.95rem;font-weight:500}
+.nav-links a:hover{color:var(--navy);text-decoration:none}
+.btn{display:inline-block;padding:.6rem 1.3rem;border-radius:var(--radius);font-weight:600;font-size:.9rem;border:1.5px solid var(--navy);background:var(--navy);color:var(--cream)}
+.page-header{padding:4rem 0 2rem;text-align:center;background:radial-gradient(ellipse at top,rgba(201,160,99,.08),transparent 60%),var(--cream)}
+.eyebrow{display:inline-block;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);font-weight:700;margin-bottom:1rem;padding:.4rem 1rem;background:rgba(201,160,99,.12);border-radius:100px}
+.legal-content{max-width:780px;margin:0 auto;padding:3rem 1.5rem 5rem;background:var(--surface);border-radius:var(--radius-lg);border:1px solid var(--border);box-shadow:var(--shadow-sm)}
+.legal-section{padding:0 1rem}
+.last-update{color:var(--muted);font-style:italic;font-size:.9rem;text-align:center;margin-bottom:2rem}
+.toc{background:#f7f4ec;padding:1.5rem;border-radius:8px;margin:2rem 0}
+.toc h3{margin-top:0;color:var(--navy);font-family:var(--font-b);font-size:.95rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700}
+.toc ol{margin-left:1.5rem;color:var(--navy)}
+.toc ol li{margin-bottom:.3rem}
+.toc a{color:var(--navy);font-weight:500}
+.warning-box{background:#fff8ed;border-left:4px solid var(--gold-dark);padding:1rem 1.2rem;border-radius:6px;margin:1.5rem 0}
+.warning-box strong{color:var(--gold-dark)}
+.site-footer{background:var(--navy-dark);color:rgba(253,252,248,.7);padding:4rem 0 1.5rem;margin-top:5rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:2.5rem;margin-bottom:2.5rem;max-width:var(--max-w);margin-left:auto;margin-right:auto;padding:0 1.5rem}
+.site-footer h4{color:var(--cream);font-family:var(--font-b);font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-bottom:1rem}
+.site-footer ul{list-style:none;margin:0;padding:0}
+.site-footer ul li{margin-bottom:.5rem}
+.site-footer a{color:rgba(253,252,248,.7);font-size:.92rem}
+.site-footer a:hover{color:var(--gold);text-decoration:none}
+.footer-brand .logo{color:var(--cream);margin-bottom:1rem}
+.footer-brand .logo-mark{background:var(--gold);color:var(--navy-dark)}
+.footer-brand p{color:rgba(253,252,248,.6);max-width:320px;font-size:.92rem}
+.footer-bottom{border-top:1px solid rgba(253,252,248,.1);padding-top:1.5rem;text-align:center;font-size:.85rem;color:rgba(253,252,248,.5);max-width:var(--max-w);margin:0 auto;padding-left:1.5rem;padding-right:1.5rem}
+@media(max-width:900px){.footer-grid{grid-template-columns:1fr 1fr;gap:2rem}.legal-content{padding:2rem 1rem 3rem}}
+@media(max-width:720px){.nav-links{display:none}.footer-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="site-header">
+<nav class="nav" aria-label="Navigation principale">
+<a href="index.html" class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="services.html" class="btn">Commencer</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section class="page-header">
+<div class="container">
+<span class="eyebrow">Informations légales</span>
+<h1>Conditions Générales de Vente</h1>
+</div>
+</section>
+
+<div class="legal-content">
+<p class="last-update">Dernière mise à jour : 1<sup>er</sup> mai 2026</p>
+
+<div class="legal-section">
+
+<div class="toc">
+<h3>Sommaire</h3>
+<ol>
+<li><a href="#article-1">Objet</a></li>
+<li><a href="#article-2">Acceptation des conditions</a></li>
+<li><a href="#article-3">Description des prestations</a></li>
+<li><a href="#article-4">Tarifs et modalités de paiement</a></li>
+<li><a href="#article-5">Modalités d'accès aux contenus</a></li>
+<li><a href="#article-6">Droit de rétractation</a></li>
+<li><a href="#article-7">Propriété intellectuelle</a></li>
+<li><a href="#article-8">Obligations de l'utilisateur</a></li>
+<li><a href="#article-9">Responsabilité et garanties</a></li>
+<li><a href="#article-10">Données personnelles</a></li>
+<li><a href="#article-11">Service client</a></li>
+<li><a href="#article-12">Litiges et droit applicable</a></li>
+</ol>
+</div>
+
+<h2 id="article-1">Article 1 — Objet</h2>
+<p>Les présentes Conditions Générales de Vente (ci-après « CGV ») régissent les relations contractuelles entre Classe En Main, entreprise individuelle (auto-entrepreneur) dont le siège est situé 88 rue du Réthal, 57405 Guntviller (France), immatriculée sous le numéro SIRET 88232989900026 (code APE 9602B), représentée par Madame Angéline Aron Clauss (ci-après « le Vendeur »), et toute personne physique ou morale souscrivant à l'une des prestations proposées (ci-après « le Client »).</p>
+<p>Les prestations proposées sont des formations en ligne sous forme de coaching pédagogique destinées aux enseignants et aux personnes intéressées par la gestion de classe et l'accompagnement éducatif.</p>
+
+<h2 id="article-2">Article 2 — Acceptation des conditions</h2>
+<p>Toute commande de prestation implique l'acceptation pleine et entière des présentes CGV par le Client. Cette acceptation est matérialisée par la validation de la commande sur le site internet ou par tout autre moyen écrit.</p>
+<p>Les présentes CGV prévalent sur tout autre document du Client, notamment toutes conditions générales d'achat. Le Vendeur se réserve le droit de modifier les présentes CGV à tout moment. Les CGV applicables sont celles en vigueur à la date de la commande.</p>
+
+<h2 id="article-3">Article 3 — Description des prestations</h2>
+<p>Le Vendeur propose trois formules de coaching en ligne :</p>
+
+<h3>Coaching Essentiel — 297 €</h3>
+<ul>
+<li>Accès aux contenus vidéo du Module 1 pendant 30 jours</li>
+<li>Coaching de groupe</li>
+<li>Plateforme accessible 24/7</li>
+<li>Support par courriel</li>
+</ul>
+
+<h3>Coaching Personnalisé — 395 €</h3>
+<ul>
+<li>Accès aux contenus vidéo des Modules 1, 2 et 3 pendant 30 jours</li>
+<li>4 séances individuelles de coaching d'une heure en visio</li>
+<li>Messagerie instantanée avec le coach</li>
+<li>Plan d'objectifs personnalisé</li>
+</ul>
+
+<h3>Premium — 599 €</h3>
+<ul>
+<li>Accès aux contenus vidéo des Modules 1, 2, 3 et 4 pendant 365 jours</li>
+<li>6 séances individuelles de coaching d'une heure en visio</li>
+<li>Messagerie instantanée avec le coach</li>
+<li>Accès à la communauté privée</li>
+</ul>
+
+<p>Le contenu détaillé de chaque formule est précisé sur la page « Services & Tarifs » du site. Le Vendeur se réserve le droit de modifier le contenu des prestations à tout moment, sans préavis, sous réserve de respecter les engagements pris envers les Clients déjà inscrits.</p>
+
+<h2 id="article-4">Article 4 — Tarifs et modalités de paiement</h2>
+<p>Les tarifs sont indiqués en euros, toutes taxes comprises (TTC) le cas échéant. Les tarifs en vigueur sont ceux affichés sur le site au moment de la validation de la commande.</p>
+<p>Le paiement s'effectue intégralement en ligne, lors de la commande, via la plateforme PayPal sécurisée. Le Client garantit au Vendeur qu'il dispose des autorisations éventuellement nécessaires pour utiliser le mode de paiement choisi.</p>
+<p>La commande n'est validée qu'à compter de l'encaissement effectif du règlement.</p>
+
+<h2 id="article-5">Article 5 — Modalités d'accès aux contenus</h2>
+<p>Après validation du paiement, le Client reçoit par courriel, dans un délai maximum de 24 heures ouvrées, ses identifiants d'accès à la plateforme de formation.</p>
+<p>L'accès aux contenus est personnel et incessible. Tout partage de compte ou diffusion non autorisée des contenus entraînera la suspension immédiate de l'accès, sans remboursement.</p>
+<p>La durée d'accès court à compter de la date d'envoi des identifiants. À l'expiration de cette période, l'accès est automatiquement clôturé.</p>
+
+<h2 id="article-6">Article 6 — Droit de rétractation</h2>
+<p>Conformément aux articles L221-18 et suivants du Code de la consommation, le Client dispose d'un délai de quatorze (14) jours calendaires à compter de la conclusion du contrat pour exercer son droit de rétractation, sans avoir à motiver sa décision.</p>
+
+<div class="warning-box">
+<p><strong>⚠️ Important — Renonciation au droit de rétractation pour les contenus numériques</strong></p>
+<p>Conformément à l'article L221-28 13° du Code de la consommation, le Client reconnaît expressément que :</p>
+<p>– L'exécution de la prestation commence dès la première connexion à la plateforme et le visionnage de tout contenu vidéo ;</p>
+<p>– En accédant aux contenus avant la fin du délai de rétractation, le Client renonce expressément à son droit de rétractation pour la part exécutée ;</p>
+<p>– Aucun remboursement ne sera dû pour les contenus déjà consultés.</p>
+</div>
+
+<p>Pour exercer le droit de rétractation dans les conditions légales (avant tout accès aux contenus), le Client doit notifier sa décision par courriel à <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a> en précisant son identité, la date de commande et la prestation concernée.</p>
+<p>Le remboursement sera effectué dans un délai maximum de 14 jours suivant la réception de la notification, par le même moyen de paiement utilisé lors de la commande.</p>
+
+<h2 id="article-7">Article 7 — Propriété intellectuelle</h2>
+<p>L'ensemble des contenus mis à disposition (vidéos, supports écrits, scripts, illustrations, méthodologie, etc.) sont la propriété exclusive du Vendeur et sont protégés par le Code de la Propriété Intellectuelle.</p>
+<p>L'achat d'une formule donne au Client un droit d'accès strictement personnel et non transférable aux contenus, pour la durée de l'abonnement souscrit.</p>
+<p>Sont strictement interdits, sous peine de poursuites :</p>
+<ul>
+<li>Toute reproduction, totale ou partielle, des contenus</li>
+<li>Toute diffusion, partage ou redistribution sous quelque forme que ce soit</li>
+<li>Toute exploitation commerciale des contenus</li>
+<li>Tout enregistrement, capture d'écran ou téléchargement non autorisé</li>
+</ul>
+
+<h2 id="article-8">Article 8 — Obligations de l'utilisateur</h2>
+<p>Le Client s'engage à :</p>
+<ul>
+<li>Fournir des informations exactes lors de son inscription</li>
+<li>Conserver confidentiels ses identifiants de connexion</li>
+<li>Ne pas partager son accès avec une tierce personne</li>
+<li>Respecter la propriété intellectuelle du Vendeur</li>
+<li>Adopter un comportement respectueux dans les espaces de coaching de groupe et de communauté</li>
+</ul>
+<p>Tout manquement à ces obligations pourra entraîner la suspension immédiate de l'accès, sans remboursement.</p>
+
+<h2 id="article-9">Article 9 — Responsabilité et garanties</h2>
+<p>Le Vendeur s'engage à mettre en œuvre tous les moyens à sa disposition pour fournir les prestations dans les meilleures conditions. Il s'agit d'une obligation de moyens et non de résultat.</p>
+<p>Le Vendeur ne peut être tenu responsable :</p>
+<ul>
+<li>D'une mauvaise compréhension ou application des contenus par le Client</li>
+<li>D'une interruption temporaire d'accès due à des opérations de maintenance ou à des cas de force majeure</li>
+<li>De problèmes liés à la connexion internet du Client</li>
+<li>De résultats spécifiques attendus par le Client (les formations proposent des outils, pas des promesses de résultats)</li>
+</ul>
+
+<h2 id="article-10">Article 10 — Données personnelles</h2>
+<p>Le traitement des données personnelles du Client est régi par notre <a href="confidentialite.html">Politique de confidentialité</a>, conforme au Règlement Général sur la Protection des Données (RGPD).</p>
+
+<h2 id="article-11">Article 11 — Service client</h2>
+<p>Pour toute question, réclamation ou demande relative à une prestation, le Client peut contacter le service client à l'adresse suivante : <a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a>.</p>
+<p>Une réponse sera apportée dans un délai maximum de 48 heures ouvrées.</p>
+
+<h2 id="article-12">Article 12 — Litiges et droit applicable</h2>
+<p>Les présentes CGV sont soumises au droit français.</p>
+<p>En cas de litige, les parties s'efforceront de trouver une solution amiable. À défaut, le Client est informé de la possibilité de recourir à un médiateur de la consommation, conformément aux articles L612-1 et suivants du Code de la consommation.</p>
+<p>Le Client peut également utiliser la plateforme européenne de règlement en ligne des litiges accessible à l'adresse suivante : <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.</p>
+<p>À défaut de résolution amiable, tout litige sera porté devant les tribunaux français compétents.</p>
+
+</div>
+</div>
+</main>
+
+<footer class="site-footer">
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="logo"><span class="logo-mark">CM</span><span>Classe En Main</span></div>
+<p>Coaching en ligne pour avancer à votre rythme, avec un accompagnement humain et professionnel.</p>
+</div>
+<div>
+<h4>Navigation</h4>
+<ul>
+<li><a href="index.html">Accueil</a></li>
+<li><a href="about.html">À propos</a></li>
+<li><a href="services.html">Services & Tarifs</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4>Légal</h4>
+<ul>
+<li><a href="mentions-legales.html">Mentions légales</a></li>
+<li><a href="cgv.html">CGV</a></li>
+<li><a href="confidentialite.html">Confidentialité</a></li>
+</ul>
+</div>
+<div>
+<h4>Contact</h4>
+<ul>
+<li><a href="mailto:classe-en-main@hotmail.com">classe-en-main@hotmail.com</a></li>
+<li>Lun–Ven · 9h–18h</li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">© <span id="year"></span> Classe En Main. Tous droits réservés.</div>
+</footer>
+
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
